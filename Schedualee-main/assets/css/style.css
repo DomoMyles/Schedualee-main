@@ -35,20 +35,17 @@ textarea{
   border-radius: 15px;
 }
 
-.li {
-  padding: 10px
-  backgroundcolor: lightgrey;
-}
-
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  width: 100%;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
+  width: 5%;
   border-top: 1px dashed #000000;
 }
 
@@ -80,7 +77,6 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.nextTo{
-  float: Left;
-
+.widen{
+  width: 90%;
 }

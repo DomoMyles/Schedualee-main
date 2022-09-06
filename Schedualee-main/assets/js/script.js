@@ -4,6 +4,7 @@ var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getD
 var time = today.getHours()
 console.log(time)
 
+//set the screen to display the day of the week
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const d = new Date();
 let day = weekday[d.getDay()];
@@ -16,23 +17,22 @@ for (let i = 9; i < 18; i++) {
     var place = document.getElementById(i),
         child = place.children[1]
         child.textContent = word
-    console.log(word);
 }
 
 
 //set button clicked
     let result = document.querySelector('button');
     document.addEventListener('click', (e) => {
-        var element = e.target.parentElement.id;
-        var getFrom = document.getElementById(element);
+        let element = e.target; 
+        if(element.tagName == "BUTTON"){         
+
+        var path = e.target.parentElement.id;
+        var getFrom = document.getElementById(path);
         var child = getFrom.children[1];
         var words = child.value;
-        window.localStorage.setItem(element, words)
-        var result = window.localStorage.getItem(element)
-        console.log(result)
-        console.log(child)
-        console.log(element)
-    });
+        window.localStorage.setItem(path, words)
+        var result = window.localStorage.getItem(path)
+    }});
 
 
 
@@ -48,7 +48,7 @@ if (time == 9) {
 
 if (time < 9) {
     var nine = document.getElementById("9")
-    nine.style.backgroundColor = "lightblue"
+    nine.classList.add('future')
 }
 
 if (time > 9) {
@@ -64,7 +64,7 @@ if (time == 10) {
 
 if (time < 10) {
     var ten = document.getElementById("10")
-    ten.style.backgroundColor = "lightblue"
+    ten.classList.add('future')
 }
 
 if (time > 10) {
@@ -81,7 +81,7 @@ if (time == 11) {
 
 if (time < 11) {
     var eleven = document.getElementById("11")
-    eleven.style.backgroundColor = "lightblue"
+    eleven.classList.add('future')
 }
 
 if (time > 11) {
@@ -98,7 +98,7 @@ if (time == 12) {
 
 if (time < 12) {
     var twelve = document.getElementById("12")
-    twelve.style.backgroundColor = "lightblue"
+    twelve.classList.add('future')
 }
 
 if (time > 12) {
@@ -115,7 +115,7 @@ if (time == 13) {
 
 if (time < 13) {
     var one = document.getElementById("13")
-    one.style.backgroundColor = "lightblue"
+    one.classList.add('future')
 }
 
 if (time > 13) {
@@ -131,7 +131,7 @@ if (time == 14) {
 
 if (time < 14) {
     var two = document.getElementById("14")
-    two.style.backgroundColor = "lightblue"
+    two.classList.add('future')
 }
 
 if (time > 14) {
@@ -147,7 +147,7 @@ if (time == 15) {
 
 if (time < 15) {
     var three = document.getElementById("15")
-    three.style.backgroundColor = "lightblue"
+    three.classList.add('future')
 }
 
 if (time > 15) {
@@ -164,7 +164,7 @@ if (time == 16) {
 
 if (time < 16) {
     var four = document.getElementById("16")
-    four.style.backgroundColor = "lightblue"
+    four.classList.add('future')
 }
 
 if (time > 16) {
@@ -182,7 +182,7 @@ if (time == 17) {
 
 if (time < 17) {
     var five = document.getElementById("17")
-    five.style.backgroundColor = "lightblue"
+    five.classList.add('future')
 }
 
 if (time > 17) {
@@ -198,7 +198,7 @@ if (time == 18) {
 
 if (time < 18) {
     var six = document.getElementById("18")
-    six.style.backgroundColor = "lightblue"
+    six.classList.add('future')
 }
 
 if (time > 18) {
@@ -215,28 +215,10 @@ if (time == 19) {
 
 if (time < 19) {
     var seven = document.getElementById("19")
-    seven.style.backgroundColor = "lightblue"
+    seven.classList.add('future')
 }
 
 if (time > 19) {
     var seven = document.getElementById("19")
     seven.style.backgroundColor = "grey"
-}
-
-if (time == 13) {
-    console.log(today)
-    console.log("Whaterman")
-}
-if (time == 14) {
-    console.log(today)
-    console.log("Whaterman")
-}
-
-if (time == 15) {
-    console.log(today)
-    console.log("Whaterman")
-}
-
-function resefdt() {
-    document.getElementsByClassName('pixel').style.backgroundColor = "white";
 }
