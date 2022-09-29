@@ -11,4 +11,4 @@ Deployed Link:
 https://domomyles.github.io/Schedualee/
 
 Screenshot:
-![SchedualPicture](assets/images/picture1)
+![SchedualPicture](assets/images/picture1.JPG)
